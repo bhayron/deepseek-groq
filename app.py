@@ -19,7 +19,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Teste com DeepSeek")
+st.title("DeepSeek do Bhayron")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = []
