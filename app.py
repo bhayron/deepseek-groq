@@ -6,6 +6,18 @@ from langchain_groq import ChatGroq
 llm = ChatGroq(model="deepseek-r1-distill-llama-70b", api_key="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")
 
 st.set_page_config(page_title="Chat Deep", layout="centered")
+
+st.markdown(
+    """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("Teste com DeepSeek")
 
 if "messages" not in st.session_state:
