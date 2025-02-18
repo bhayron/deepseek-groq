@@ -4,7 +4,7 @@ load_dotenv(find_dotenv())
 import streamlit as st
 from langchain_groq import ChatGroq
 
-llm = ChatGroq(model="deepseek-r1-distill-llama-70b", api_key="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")
+llm = ChatGroq(model="deepseek-r1-distill-llama-70b", api_key="sua_api_key")
 
 st.set_page_config(page_title="Chat Deep", layout="centered")
 
