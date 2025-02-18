@@ -1,3 +1,4 @@
+import re
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 import streamlit as st
@@ -35,6 +36,9 @@ if in_message:
     chat.markdown(in_message)
     
     response = llm.invoke(messages).content
+
+    response = re.sub(r"<think>.*?</think>", "", response, flags=re.DOTALL).strip()
+
     messages.append(("ai", response))
     
     chat = st.chat_message("ai")
